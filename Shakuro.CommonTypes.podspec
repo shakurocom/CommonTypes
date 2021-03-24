@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name             = 'Shakuro.CommonTypes'
-    s.version          = '0.0.1'
+    s.version          = '0.0.2'
     s.summary          = 'Common Types'
     s.homepage         = 'https://github.com/shakurocom/CommonTypes'
     s.license          = { :type => "MIT", :file => "LICENSE.md" }
