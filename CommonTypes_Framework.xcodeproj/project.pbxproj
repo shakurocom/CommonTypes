@@ -44,7 +44,7 @@
 /* Begin PBXFileReference section */
 		F08899552698445F00058D37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F08899562698445F00058D37 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		F08899572698446A00058D37 /* Shakuro.CommonTypes.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Shakuro.CommonTypes.podspec; sourceTree = "<group>"; };
+		F08899572698446A00058D37 /* Shakuro.CommonTypes.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Shakuro.CommonTypes.podspec; sourceTree = "<group>"; };
 		F088998D2698527800058D37 /* CommonTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08899952698527800058D37 /* CommonTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08899B62698562A00058D37 /* CommonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
