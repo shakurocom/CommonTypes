@@ -49,7 +49,7 @@ public final class ShortNumberFormatter {
                 let maxIndex = suffixes.count - 1
                 let maxDigitCount = Double(Constant.digitsInStep * maxIndex)
                 suffixIndex = digitCount < maxDigitCount ? Int(digitCount / Double(Constant.digitsInStep)) : maxIndex
-                shortValue = value/pow(Constant.step, Double(suffixIndex))
+                shortValue = value / pow(Constant.step, Double(suffixIndex))
             } else {
                 // fallback to original value without prefix
                 assertionFailure("\(type(of: self)) - \(#function): . log10(value) produced NaN or infinity")

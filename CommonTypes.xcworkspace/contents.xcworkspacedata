@@ -7,4 +7,11 @@
    <FileRef
       location = "group:CommonTypes_Example.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Volumes/Samsung_T5/_slaschuk/_projects/Shakuro.CommonTypes/Podfile"
+      assignedFileDataType = "public.ruby-script">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>

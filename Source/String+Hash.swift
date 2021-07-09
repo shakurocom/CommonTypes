@@ -7,6 +7,10 @@ import Foundation
 
 extension String {
 
+    public func SHA256() -> String? {
+        return data(using: String.Encoding.utf8)?.SHA256String()
+    }
+
     public func SHA512() -> String? {
         return data(using: String.Encoding.utf8)?.SHA512()
     }

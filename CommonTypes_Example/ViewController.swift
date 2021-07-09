@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let test = [1,2,3,4,5,6]
+        let test = [1, 2, 3, 4, 5, 6] // TODO: do something usefull
         print(test.chunked(chunkSize: 2).debugDescription)
     }
 
