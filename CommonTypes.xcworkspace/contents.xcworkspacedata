@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CommonTypes_Framework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommonTypes_Example.xcodeproj">
+   </FileRef>
+</Workspace>

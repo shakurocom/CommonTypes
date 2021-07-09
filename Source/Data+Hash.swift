@@ -3,8 +3,9 @@
 // Sergey Laschuk; original found on the Internets
 //
 
-import CommonCryptoModule
 import Foundation
+import CommonCrypto
+//import CommonCryptoModule
 
 extension Data {
 
