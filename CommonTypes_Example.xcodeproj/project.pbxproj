@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75A23AC434F2877C56117893 /* libPods-CommonTypes_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF2F2E36D0C93818941B419 /* libPods-CommonTypes_Example.a */; };
+		D188418A4192B05C9868E8DE /* Pods_CommonTypes_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */; };
 		F08899D72698575800058D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08899CF2698575800058D37 /* AppDelegate.swift */; };
 		F08899D82698575800058D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08899D02698575800058D37 /* Assets.xcassets */; };
 		F08899D92698575800058D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08899D12698575800058D37 /* LaunchScreen.storyboard */; };
@@ -32,8 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonTypes_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7778EBA712DC8E6B3D02CAB7 /* Pods-CommonTypes_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTypes_Example.debug.xcconfig"; path = "Target Support Files/Pods-CommonTypes_Example/Pods-CommonTypes_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7FF2F2E36D0C93818941B419 /* libPods-CommonTypes_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonTypes_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B464FCD35029D14F39A2D6B0 /* Pods-CommonTypes_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTypes_Example.release.xcconfig"; path = "Target Support Files/Pods-CommonTypes_Example/Pods-CommonTypes_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F08899CF2698575800058D37 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08899D02698575800058D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08899DF2698591400058D37 /* CommonTypes.framework in Frameworks */,
-				75A23AC434F2877C56117893 /* libPods-CommonTypes_Example.a in Frameworks */,
+				D188418A4192B05C9868E8DE /* Pods_CommonTypes_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				F08899DE2698591400058D37 /* CommonTypes.framework */,
-				7FF2F2E36D0C93818941B419 /* libPods-CommonTypes_Example.a */,
+				4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
