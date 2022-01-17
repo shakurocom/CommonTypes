@@ -34,8 +34,7 @@ extension UIViewController {
         let containerView: UIView = targetContainerView ?? view
 
         childViewController.view.frame = containerView.bounds
-        childViewController.view.translatesAutoresizingMaskIntoConstraints = true
-        childViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        childViewController.view.translatesAutoresizingMaskIntoConstraints = false
 
         if notifyAboutAppearanceTransition {
             childViewController.beginAppearanceTransition(true, animated: animations != nil)
@@ -45,6 +44,10 @@ extension UIViewController {
         } else {
             containerView.addSubview(childViewController.view)
         }
+        containerView.leadingAnchor.constraint(equalTo: childViewController.view.leadingAnchor).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: childViewController.view.trailingAnchor).isActive = true
+        containerView.topAnchor.constraint(equalTo: childViewController.view.topAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: childViewController.view.bottomAnchor).isActive = true
         if let realAnimations = animations {
             UIView.animate(
                 withDuration: animationDuration,
