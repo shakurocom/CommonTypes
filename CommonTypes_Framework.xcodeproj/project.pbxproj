@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5A4995D27ACDACC00204B33 /* DecelerationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */; };
+		A5A4995E27ACDACC00204B33 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */; };
 		F08899962698527900058D37 /* CommonTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F088998D2698527800058D37 /* CommonTypes.framework */; };
 		F0DDB7D826986D7900AAD959 /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DDB7C326986D7900AAD959 /* Comparable+Clamp.swift */; };
 		F0DDB7D926986D7900AAD959 /* UIApplication+BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DDB7C426986D7900AAD959 /* UIApplication+BundleIdentifier.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecelerationHelper.swift; sourceTree = "<group>"; };
+		A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		F08899552698445F00058D37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F08899562698445F00058D37 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		F08899572698446A00058D37 /* Shakuro.CommonTypes.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Shakuro.CommonTypes.podspec; sourceTree = "<group>"; };
@@ -123,9 +127,11 @@
 				F0DDB7C526986D7900AAD959 /* CGPoint+Distance.swift */,
 				F0DDB7C326986D7900AAD959 /* Comparable+Clamp.swift */,
 				F0DDB7D526986D7900AAD959 /* Data+Hash.swift */,
+				A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */,
 				F0DDB7D026986D7900AAD959 /* ErrorInterpreter.swift */,
 				F0DDB7CB26986D7900AAD959 /* GenericCommonError.swift */,
 				F0DDB7CC26986D7900AAD959 /* GenericError.swift */,
+				A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */,
 				F0DDB7D726986D7900AAD959 /* Lock+Execute.swift */,
 				F0DDB7CE26986D7900AAD959 /* NetworkError.swift */,
 				F0DDB7C726986D7900AAD959 /* ShortNumberFormatter.swift */,
@@ -262,6 +268,7 @@
 				F0DDB7DA26986D7900AAD959 /* CGPoint+Distance.swift in Sources */,
 				F0DDB7E626986D7900AAD959 /* UIColor+Helpers.swift in Sources */,
 				F0DDB7EB26986D7900AAD959 /* CALayer+Transition.swift in Sources */,
+				A5A4995E27ACDACC00204B33 /* KeyboardHandler.swift in Sources */,
 				F0DDB7E526986D7900AAD959 /* ErrorInterpreter.swift in Sources */,
 				F0DDB7D826986D7900AAD959 /* Comparable+Clamp.swift in Sources */,
 				F0DDB7EC26986D7900AAD959 /* Lock+Execute.swift in Sources */,
@@ -279,6 +286,7 @@
 				F0DDB7EA26986D7900AAD959 /* Data+Hash.swift in Sources */,
 				F0DDB7E126986D7900AAD959 /* GenericError.swift in Sources */,
 				F0DDB7DC26986D7900AAD959 /* ShortNumberFormatter.swift in Sources */,
+				A5A4995D27ACDACC00204B33 /* DecelerationHelper.swift in Sources */,
 				F0DDB7E726986D7900AAD959 /* UIStoryboard+Instantiate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
