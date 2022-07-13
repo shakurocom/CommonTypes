@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                  = 'Shakuro.CommonTypes'
-    s.version               = '1.1.1'
+    s.version               = '1.1.2'
     s.summary               = 'Common Types'
     s.homepage              = 'https://github.com/shakurocom/CommonTypes'
     s.license               = { :type => "MIT", :file => "LICENSE.md" }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.source                = { :git => 'https://github.com/shakurocom/CommonTypes.git', :tag => s.version }
     s.swift_versions        = ['5.1', '5.2', '5.3', '5.4']
     s.source_files          = 'Source/*'
-    s.ios.deployment_target = '10.0'
+    s.ios.deployment_target = '11.0'
 
     #s.dependency 'CommonCryptoModule', '1.0.2'
 
