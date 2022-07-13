@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BE7730C287DB9C4000ED5FB /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */; };
 		A5A4995D27ACDACC00204B33 /* DecelerationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */; };
 		A5A4995E27ACDACC00204B33 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */; };
 		F08899962698527900058D37 /* CommonTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F088998D2698527800058D37 /* CommonTypes.framework */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
 		A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecelerationHelper.swift; sourceTree = "<group>"; };
 		A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		F08899552698445F00058D37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				F0DDB7CF26986D7900AAD959 /* Array+Chunks.swift */,
 				F0DDB7CD26986D7900AAD959 /* AsyncResult.swift */,
+				6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */,
 				F0DDB7D626986D7900AAD959 /* CALayer+Transition.swift */,
 				F0DDB7C526986D7900AAD959 /* CGPoint+Distance.swift */,
 				F0DDB7C326986D7900AAD959 /* Comparable+Clamp.swift */,
@@ -272,6 +275,7 @@
 				F0DDB7E526986D7900AAD959 /* ErrorInterpreter.swift in Sources */,
 				F0DDB7D826986D7900AAD959 /* Comparable+Clamp.swift in Sources */,
 				F0DDB7EC26986D7900AAD959 /* Lock+Execute.swift in Sources */,
+				6BE7730C287DB9C4000ED5FB /* BundleHelper.swift in Sources */,
 				F0DDB7E926986D7900AAD959 /* UITableView+Reusable.swift in Sources */,
 				F0DDB7E426986D7900AAD959 /* Array+Chunks.swift in Sources */,
 				F0DDB7DB26986D7900AAD959 /* String+Hash.swift in Sources */,
@@ -447,7 +451,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CommonTypes_Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +483,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CommonTypes_Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
