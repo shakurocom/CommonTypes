@@ -4,16 +4,14 @@
 
 import UIKit
 
-public struct BundleHelper {
+public class BundleHelper {
 
-    private static var bundle: Bundle = Bundle.main
+    private let bundle: Bundle
 
-    // MARK: - Public
-
-    /// Searches for and creates a bundle for the specified class and bundle name.
+    /// Instantiate bundle for the specified class and bundle name.
     /// - parameter targetClass: the class name in the bundle it is in.
     /// - parameter bundleName: bundle name with resources.
-    public static func setup(targetClass: AnyClass, bundleName: String) {
+    public init(targetClass: AnyClass, bundleName: String) {
         let bundle = Bundle(for: targetClass)
         if let bundleURL = bundle.url(forResource: bundleName, withExtension: "bundle"),
            let bundleInternal = Bundle(url: bundleURL) {
@@ -23,22 +21,24 @@ public struct BundleHelper {
         }
     }
 
+    // MARK: - Public
+
     /// Instantiate of the image with the given name from the bundle.
     /// - parameter named: image name.
-    public static func image(named: String, compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
+    public func image(named: String, compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
         return UIImage(named: named, in: bundle, compatibleWith: traitCollection)
     }
 
     /// Instantiate of the color with the given name from the bundle.
     /// - parameter named: color name.
-    public static func color(named: String, compatibleWith traitCollection: UITraitCollection? = nil) -> UIColor? {
+    public func color(named: String, compatibleWith traitCollection: UITraitCollection? = nil) -> UIColor? {
         return UIColor(named: named, in: bundle, compatibleWith: traitCollection)
     }
 
     /// Registers the specified font from the bundle.
     /// - parameter name: font name.
     /// - parameter extension: font extension.
-    public static func registerFont(name: String, fontExtension: String) {
+    public func registerFont(name: String, fontExtension: String) {
         guard let fontURL = bundle.url(forResource: name, withExtension: fontExtension) else {
             debugPrint("Couldn't find font \(name)")
             return
@@ -60,7 +60,7 @@ public struct BundleHelper {
     }
 
     /// Registers the specified fonts from the bundle.
-    public static func registerFonts(_ fonts: [(fontName: String, fontExtension: String)]) {
+    public func registerFonts(_ fonts: [(fontName: String, fontExtension: String)]) {
         for font in fonts {
             registerFont(name: font.fontName, fontExtension: font.fontExtension)
         }
@@ -68,7 +68,7 @@ public struct BundleHelper {
 
     /// Returns instance of a UINib.
     /// - parameter nibName: UINib file name.
-    public static func loadNib(name: String) -> UINib {
+    public func loadNib(name: String) -> UINib {
         return UINib(nibName: name, bundle: bundle)
     }
 
@@ -82,12 +82,8 @@ public struct BundleHelper {
      - Example:
      `let exampleViewController: ExampleViewController = BundleHelper.instantiateViewControllerFromBundle(targetClass: ExampleViewController.type, nibName: "kExampleViewController"`
      */
-    public static func instantiateViewController<T>(targetClass: T.Type, nibName: String) -> T where T: UIViewController {
+    public func instantiateViewController<T>(targetClass: T.Type, nibName: String) -> T where T: UIViewController {
         return targetClass.init(nibName: nibName, bundle: bundle)
     }
-
-    // MARK: - Private
-
-    private init() {}
 
 }
