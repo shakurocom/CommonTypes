@@ -9,8 +9,8 @@ public class BundleHelper {
     private let bundle: Bundle
 
     /// Instantiates bundle for the specified class and bundle name.
-    /// - parameter targetClass: the class with which the bundle is associated.
-    /// - parameter bundleName: the resource bundle name, used as fallback.
+    /// - parameter targetClass: The class with which the bundle is associated.
+    /// - parameter bundleName: The resource bundle name, used as fallback.
     public init(targetClass: AnyClass, bundleName: String) {
         let bundle = Bundle(for: targetClass)
         if let bundleURL = bundle.url(forResource: bundleName, withExtension: "bundle"),
@@ -23,25 +23,25 @@ public class BundleHelper {
 
     // MARK: - Public
 
-    /// Creates an image object using the named image asset that is compatible with the specified trait collection.
-    /// - parameter named: the name of the image asset or file.
-    /// - parameter traitCollection: the traits associated with the intended environment for the image. Use this parameter to ensure that the correct variant of the image is loaded. If you specify nil, this method uses the traits associated with the main screen.
+    /// Returns an image object using the named image asset that is compatible with the specified trait collection.
+    /// - parameter named: The name of the image asset or file.
+    /// - parameter traitCollection: The traits associated with the intended environment for the image. Use this parameter to ensure that the correct variant of the image is loaded. If you specify nil, this method uses the traits associated with the main screen.
     /// - returns: The image object that best matches the desired traits with the given name, or nil if no suitable image was found.
     public func image(named: String, compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
         return UIImage(named: named, in: bundle, compatibleWith: traitCollection)
     }
 
-    /// Creates a color object using the named asset that’s compatible with the specified trait collection.
-    /// - parameter named: the name of the asset containing the color.
-    /// - parameter traitCollection: the trait collection that specifies the gamut to use when selecting the color.
+    /// Returns a color object using the named asset that’s compatible with the specified trait collection.
+    /// - parameter named: The name of the asset containing the color.
+    /// - parameter traitCollection: The trait collection that specifies the gamut to use when selecting the color.
     /// - returns: An initialized color object. The returned object uses the color space specified for the asset.
     public func color(named: String, compatibleWith traitCollection: UITraitCollection? = nil) -> UIColor? {
         return UIColor(named: named, in: bundle, compatibleWith: traitCollection)
     }
 
     /// Registers the specified font from the bundle.
-    /// - parameter name: the name of the font file.
-    /// - parameter extension: the extension of the font file.
+    /// - parameter name: The name of the font file.
+    /// - parameter extension: The extension of the font file.
     public func registerFont(name: String, fontExtension: String) {
         guard let fontURL = bundle.url(forResource: name, withExtension: fontExtension) else {
             debugPrint("Couldn't find font \(name)")
@@ -64,7 +64,7 @@ public class BundleHelper {
     }
 
     /// Registers the specified fonts from the bundle.
-    /// - parameter fonts: array of font names with extensions.
+    /// - parameter fonts: Array of font names with extensions.
     public func registerFonts(_ fonts: [(fontName: String, fontExtension: String)]) {
         for font in fonts {
             registerFont(name: font.fontName, fontExtension: font.fontExtension)
@@ -72,7 +72,7 @@ public class BundleHelper {
     }
 
     /// Returns a nib object from the nib file.
-    /// - parameter name: the name of the nib file, without any leading path information.
+    /// - parameter name: The name of the nib file, without any leading path information.
     /// - returns: The initialized UINib object. An exception is thrown if there were errors during initialization or the nib file could not be located.
     public func loadNib(name: String) -> UINib {
         return UINib(nibName: name, bundle: bundle)
@@ -82,8 +82,8 @@ public class BundleHelper {
      Returns instance of a UIViewController.
 
      - Parameters:
-        - targetClass: view controller type,  that must be created.
-        - nibName: the name of the nib file to associate with the view controller.
+        - targetClass: View controller type,  that must be created.
+        - nibName: The name of the nib file to associate with the view controller.
      - Returns: A newly initialized UIViewController object.
 
      - Example:
