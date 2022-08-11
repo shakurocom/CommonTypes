@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179BA00128A504BB000066FE /* EMailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BA00028A504BB000066FE /* EMailValidatorTests.swift */; };
 		D188418A4192B05C9868E8DE /* Pods_CommonTypes_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */; };
 		F08899D72698575800058D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08899CF2698575800058D37 /* AppDelegate.swift */; };
 		F08899D82698575800058D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08899D02698575800058D37 /* Assets.xcassets */; };
@@ -16,6 +17,16 @@
 		F08899DF2698591400058D37 /* CommonTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08899DE2698591400058D37 /* CommonTypes.framework */; };
 		F08899E02698591400058D37 /* CommonTypes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F08899DE2698591400058D37 /* CommonTypes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		179B9FFB28A504A9000066FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0F2A30F269747100021F902 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0F2A316269747100021F902;
+			remoteInfo = CommonTypes_Example;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F08899E12698591400058D37 /* Embed Frameworks */ = {
@@ -32,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		179B9FF728A504A9000066FE /* CommonTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		179BA00028A504BB000066FE /* EMailValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMailValidatorTests.swift; sourceTree = "<group>"; };
 		4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonTypes_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7778EBA712DC8E6B3D02CAB7 /* Pods-CommonTypes_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTypes_Example.debug.xcconfig"; path = "Target Support Files/Pods-CommonTypes_Example/Pods-CommonTypes_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B464FCD35029D14F39A2D6B0 /* Pods-CommonTypes_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTypes_Example.release.xcconfig"; path = "Target Support Files/Pods-CommonTypes_Example/Pods-CommonTypes_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		179B9FF428A504A9000066FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F2A314269747100021F902 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		179B9FF828A504A9000066FE /* CommonTypesTests */ = {
+			isa = PBXGroup;
+			children = (
+				179BA00028A504BB000066FE /* EMailValidatorTests.swift */,
+			);
+			path = CommonTypesTests;
+			sourceTree = "<group>";
+		};
 		9FC415E0572EFF293094203B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F08899CE2698575800058D37 /* CommonTypes_Example */,
+				179B9FF828A504A9000066FE /* CommonTypesTests */,
 				F0F2A318269747100021F902 /* Products */,
 				F08899DD2698591400058D37 /* Frameworks */,
 				9FC415E0572EFF293094203B /* Pods */,
@@ -103,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F2A317269747100021F902 /* CommonTypes_Example.app */,
+				179B9FF728A504A9000066FE /* CommonTypesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +140,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		179B9FF628A504A9000066FE /* CommonTypesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 179B9FFD28A504A9000066FE /* Build configuration list for PBXNativeTarget "CommonTypesTests" */;
+			buildPhases = (
+				179B9FF328A504A9000066FE /* Sources */,
+				179B9FF428A504A9000066FE /* Frameworks */,
+				179B9FF528A504A9000066FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				179B9FFC28A504A9000066FE /* PBXTargetDependency */,
+			);
+			name = CommonTypesTests;
+			productName = CommonTypesTests;
+			productReference = 179B9FF728A504A9000066FE /* CommonTypesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F0F2A316269747100021F902 /* CommonTypes_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0F2A32B269747120021F902 /* Build configuration list for PBXNativeTarget "CommonTypes_Example" */;
@@ -136,9 +184,13 @@
 		F0F2A30F269747100021F902 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					179B9FF628A504A9000066FE = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = F0F2A316269747100021F902;
+					};
 					F0F2A316269747100021F902 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -158,11 +210,19 @@
 			projectRoot = "";
 			targets = (
 				F0F2A316269747100021F902 /* CommonTypes_Example */,
+				179B9FF628A504A9000066FE /* CommonTypesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		179B9FF528A504A9000066FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F2A315269747100021F902 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +279,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		179B9FF328A504A9000066FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179BA00128A504BB000066FE /* EMailValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F2A313269747100021F902 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +297,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		179B9FFC28A504A9000066FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0F2A316269747100021F902 /* CommonTypes_Example */;
+			targetProxy = 179B9FFB28A504A9000066FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F08899D12698575800058D37 /* LaunchScreen.storyboard */ = {
@@ -250,6 +326,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		179B9FFE28A504A9000066FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MW2UF479VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shakuro.CommonTypesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommonTypes_Example.app/CommonTypes_Example";
+			};
+			name = Debug;
+		};
+		179B9FFF28A504A9000066FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MW2UF479VW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shakuro.CommonTypesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommonTypes_Example.app/CommonTypes_Example";
+			};
+			name = Release;
+		};
 		F0F2A329269747120021F902 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -409,6 +525,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		179B9FFD28A504A9000066FE /* Build configuration list for PBXNativeTarget "CommonTypesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				179B9FFE28A504A9000066FE /* Debug */,
+				179B9FFF28A504A9000066FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F0F2A312269747100021F902 /* Build configuration list for PBXProject "CommonTypes_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
