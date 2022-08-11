@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		172F07AB28A500E100AFD6A2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F07AA28A500E100AFD6A2 /* Utils.swift */; };
+		179B9FDB28A501F0000066FE /* VibrationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FDA28A501F0000066FE /* VibrationGenerator.swift */; };
+		179B9FDE28A50212000066FE /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FDC28A50212000066FE /* DeviceType.swift */; };
+		179B9FDF28A50212000066FE /* DeviceOrientationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FDD28A50212000066FE /* DeviceOrientationListener.swift */; };
 		6BE7730C287DB9C4000ED5FB /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */; };
 		A5A4995D27ACDACC00204B33 /* DecelerationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */; };
 		A5A4995E27ACDACC00204B33 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		172F07AA28A500E100AFD6A2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		179B9FDA28A501F0000066FE /* VibrationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationGenerator.swift; sourceTree = "<group>"; };
+		179B9FDC28A50212000066FE /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		179B9FDD28A50212000066FE /* DeviceOrientationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceOrientationListener.swift; sourceTree = "<group>"; };
 		6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
 		A5A4995B27ACDACC00204B33 /* DecelerationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecelerationHelper.swift; sourceTree = "<group>"; };
 		A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
@@ -136,8 +142,11 @@
 				172F07AA28A500E100AFD6A2 /* Utils.swift */,
 				F0DDB7D026986D7900AAD959 /* ErrorInterpreter.swift */,
 				F0DDB7CB26986D7900AAD959 /* GenericCommonError.swift */,
+				179B9FDA28A501F0000066FE /* VibrationGenerator.swift */,
 				F0DDB7CC26986D7900AAD959 /* GenericError.swift */,
 				A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */,
+				179B9FDD28A50212000066FE /* DeviceOrientationListener.swift */,
+				179B9FDC28A50212000066FE /* DeviceType.swift */,
 				F0DDB7D726986D7900AAD959 /* Lock+Execute.swift */,
 				F0DDB7CE26986D7900AAD959 /* NetworkError.swift */,
 				F0DDB7C726986D7900AAD959 /* ShortNumberFormatter.swift */,
@@ -275,6 +284,7 @@
 				F0DDB7E626986D7900AAD959 /* UIColor+Helpers.swift in Sources */,
 				F0DDB7EB26986D7900AAD959 /* CALayer+Transition.swift in Sources */,
 				A5A4995E27ACDACC00204B33 /* KeyboardHandler.swift in Sources */,
+				179B9FDF28A50212000066FE /* DeviceOrientationListener.swift in Sources */,
 				F0DDB7E526986D7900AAD959 /* ErrorInterpreter.swift in Sources */,
 				172F07AB28A500E100AFD6A2 /* Utils.swift in Sources */,
 				F0DDB7D826986D7900AAD959 /* Comparable+Clamp.swift in Sources */,
@@ -286,6 +296,7 @@
 				F0DDB7E026986D7900AAD959 /* GenericCommonError.swift in Sources */,
 				F0DDB7DF26986D7900AAD959 /* UIViewController+Child.swift in Sources */,
 				F0DDB7E826986D7900AAD959 /* UICollectionView+SafeUpdate.swift in Sources */,
+				179B9FDE28A50212000066FE /* DeviceType.swift in Sources */,
 				F0DDB7DD26986D7900AAD959 /* UICollectionView+Reusable.swift in Sources */,
 				F0DDB7E226986D7900AAD959 /* AsyncResult.swift in Sources */,
 				F0DDB7DE26986D7900AAD959 /* UIDevice+Uptime.swift in Sources */,
@@ -293,6 +304,7 @@
 				F0DDB7E326986D7900AAD959 /* NetworkError.swift in Sources */,
 				F0DDB7EA26986D7900AAD959 /* Data+Hash.swift in Sources */,
 				F0DDB7E126986D7900AAD959 /* GenericError.swift in Sources */,
+				179B9FDB28A501F0000066FE /* VibrationGenerator.swift in Sources */,
 				F0DDB7DC26986D7900AAD959 /* ShortNumberFormatter.swift in Sources */,
 				A5A4995D27ACDACC00204B33 /* DecelerationHelper.swift in Sources */,
 				F0DDB7E726986D7900AAD959 /* UIStoryboard+Instantiate.swift in Sources */,
