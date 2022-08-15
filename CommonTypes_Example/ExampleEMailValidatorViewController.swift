@@ -1,23 +1,25 @@
 //
-//  Copyright (c) 2018 Shakuro (https://shakuro.com/)
+//
 //
 
+import Foundation
 import UIKit
 import CommonTypes
 
-class ViewController: UIViewController {
+internal class ExampleEMailValidatorViewController: UIViewController {
 
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var validationResultLabel: UILabel!
 
+    private var example: Example?
     private let emailValidator = EMailValidator()
+
+    // MARK: - Initialization
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let test = [1, 2, 3, 4, 5, 6] // TODO: do something usefull
-        print(test.chunked(chunkSize: 2).debugDescription)
 
+        title = example?.title
         validationResultLabel.text = ""
     }
 
@@ -46,4 +48,18 @@ class ViewController: UIViewController {
             validationResultLabel.text = "\(email) - invalid"
         }
     }
+
+}
+
+// MARK: - ExampleViewControllerProtocol
+
+extension ExampleEMailValidatorViewController: ExampleViewControllerProtocol {
+
+    static func instantiate(example: Example) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
+        let exampleVC: ExampleEMailValidatorViewController = storyboard.instantiateViewController(withIdentifier: "kExampleEMailValidatorViewControllerID")
+        exampleVC.example = example
+        return exampleVC
+    }
+
 }

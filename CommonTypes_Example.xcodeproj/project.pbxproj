@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		179BA00128A504BB000066FE /* EMailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179BA00028A504BB000066FE /* EMailValidatorTests.swift */; };
+		17AC9EC728AA646600DF8A2B /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EC628AA646600DF8A2B /* Example.swift */; };
+		17AC9EC928AA648200DF8A2B /* ExampleViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EC828AA648200DF8A2B /* ExampleViewControllerProtocol.swift */; };
+		17AC9ECB28AA648C00DF8A2B /* ExampleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9ECA28AA648C00DF8A2B /* ExampleSelectorViewController.swift */; };
+		17AC9ECD28AA64A500DF8A2B /* ExampleDeviceTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9ECC28AA64A500DF8A2B /* ExampleDeviceTypeViewController.swift */; };
+		17AC9ECF28AA64AF00DF8A2B /* ExampleDeviceOrientationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9ECE28AA64AF00DF8A2B /* ExampleDeviceOrientationListenerViewController.swift */; };
+		17AC9ED128AA64E300DF8A2B /* ExampleEMailValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9ED028AA64E300DF8A2B /* ExampleEMailValidatorViewController.swift */; };
 		D188418A4192B05C9868E8DE /* Pods_CommonTypes_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */; };
 		F08899D72698575800058D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08899CF2698575800058D37 /* AppDelegate.swift */; };
 		F08899D82698575800058D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08899D02698575800058D37 /* Assets.xcassets */; };
 		F08899D92698575800058D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08899D12698575800058D37 /* LaunchScreen.storyboard */; };
 		F08899DA2698575800058D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08899D32698575800058D37 /* Main.storyboard */; };
-		F08899DC2698575800058D37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08899D62698575800058D37 /* ViewController.swift */; };
 		F08899DF2698591400058D37 /* CommonTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08899DE2698591400058D37 /* CommonTypes.framework */; };
 		F08899E02698591400058D37 /* CommonTypes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F08899DE2698591400058D37 /* CommonTypes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -45,6 +50,12 @@
 /* Begin PBXFileReference section */
 		179B9FF728A504A9000066FE /* CommonTypesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTypesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		179BA00028A504BB000066FE /* EMailValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMailValidatorTests.swift; sourceTree = "<group>"; };
+		17AC9EC628AA646600DF8A2B /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		17AC9EC828AA648200DF8A2B /* ExampleViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewControllerProtocol.swift; sourceTree = "<group>"; };
+		17AC9ECA28AA648C00DF8A2B /* ExampleSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSelectorViewController.swift; sourceTree = "<group>"; };
+		17AC9ECC28AA64A500DF8A2B /* ExampleDeviceTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleDeviceTypeViewController.swift; sourceTree = "<group>"; };
+		17AC9ECE28AA64AF00DF8A2B /* ExampleDeviceOrientationListenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleDeviceOrientationListenerViewController.swift; sourceTree = "<group>"; };
+		17AC9ED028AA64E300DF8A2B /* ExampleEMailValidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleEMailValidatorViewController.swift; sourceTree = "<group>"; };
 		4E6D7D000973710F04D1E8DB /* Pods_CommonTypes_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonTypes_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7778EBA712DC8E6B3D02CAB7 /* Pods-CommonTypes_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTypes_Example.debug.xcconfig"; path = "Target Support Files/Pods-CommonTypes_Example/Pods-CommonTypes_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B464FCD35029D14F39A2D6B0 /* Pods-CommonTypes_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTypes_Example.release.xcconfig"; path = "Target Support Files/Pods-CommonTypes_Example/Pods-CommonTypes_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -53,7 +64,6 @@
 		F08899D22698575800058D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F08899D42698575800058D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F08899D52698575800058D37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F08899D62698575800058D37 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F08899DE2698591400058D37 /* CommonTypes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonTypes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F2A317269747100021F902 /* CommonTypes_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonTypes_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,11 +109,16 @@
 			isa = PBXGroup;
 			children = (
 				F08899CF2698575800058D37 /* AppDelegate.swift */,
+				17AC9EC628AA646600DF8A2B /* Example.swift */,
+				17AC9EC828AA648200DF8A2B /* ExampleViewControllerProtocol.swift */,
+				17AC9ECA28AA648C00DF8A2B /* ExampleSelectorViewController.swift */,
+				17AC9ECC28AA64A500DF8A2B /* ExampleDeviceTypeViewController.swift */,
+				17AC9ECE28AA64AF00DF8A2B /* ExampleDeviceOrientationListenerViewController.swift */,
+				17AC9ED028AA64E300DF8A2B /* ExampleEMailValidatorViewController.swift */,
 				F08899D02698575800058D37 /* Assets.xcassets */,
 				F08899D12698575800058D37 /* LaunchScreen.storyboard */,
 				F08899D32698575800058D37 /* Main.storyboard */,
 				F08899D52698575800058D37 /* Info.plist */,
-				F08899D62698575800058D37 /* ViewController.swift */,
 			);
 			path = CommonTypes_Example;
 			sourceTree = "<group>";
@@ -291,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08899DC2698575800058D37 /* ViewController.swift in Sources */,
+				17AC9ECF28AA64AF00DF8A2B /* ExampleDeviceOrientationListenerViewController.swift in Sources */,
 				F08899D72698575800058D37 /* AppDelegate.swift in Sources */,
+				17AC9EC728AA646600DF8A2B /* Example.swift in Sources */,
+				17AC9ECD28AA64A500DF8A2B /* ExampleDeviceTypeViewController.swift in Sources */,
+				17AC9ED128AA64E300DF8A2B /* ExampleEMailValidatorViewController.swift in Sources */,
+				17AC9ECB28AA648C00DF8A2B /* ExampleSelectorViewController.swift in Sources */,
+				17AC9EC928AA648200DF8A2B /* ExampleViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
