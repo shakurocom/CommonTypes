@@ -115,6 +115,7 @@ public class VibrationGenerator {
                 .iPadMini6G, .iPadMini6GCellular,
                 .iPadAir3G, .iPadAir3GCellular,
                 .iPadAir4G, .iPadAir4GCellular,
+                .iPadAir5G, .iPadAir5GCellular,
                 .appleWatch38mm, .appleWatch42mm,
                 .appleWatch1S38mm, .appleWatch1S42mm,
                 .appleWatch2S38mm, .appleWatch2S42mm,
@@ -135,9 +136,10 @@ public class VibrationGenerator {
                 .iPhone8GSM, .iPhone8Global, .iPhone8PlusGSM, .iPhone8PlusGlobal,
                 .iPhoneXGSM, .iPhoneXGlobal, .iPhoneXS, .iPhoneXSMax, .iPhoneXSMaxU, .iPhoneXR,
                 .iPhone11, .iPhone11Pro, .iPhone11ProMax,
-                .iPhoneSE2G,
+                .iPhoneSE2G, .iPhoneSE3G,
                 .iPhone12Mini, .iPhone12, .iPhone12Pro, .iPhone12ProMax,
-                .iPhone13Pro, .iPhone13ProMax, .iPhone13Mini, .iPhone13:
+                .iPhone13Pro, .iPhone13ProMax, .iPhone13Mini, .iPhone13,
+                .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax:
             return true
 
         case .appleTV1G, .appleTV2G, .appleTV3G2012, .appleTV3G2013, .appleTVHD, .appleTV4K1G, .appleTV4K2G,
@@ -161,7 +163,7 @@ public class VibrationGenerator {
                 .macBookProM1_2021_16i_max, .macBookProM1_2021_14i_pro, .macBookProM1_2021_14i_max,
                 .macMini2009, .macMini2010, .macMini2011_i5, .macMini2011_i7, .macMini2011_server, .macMini2012, .macMini2012_1TB,
                 .macMini2014, .macMini2018, .macMiniM12020,
-                .macPro2009, .macPro2010, .macPro2013, .macPro2019:
+                .macPro2009, .macPro2010, .macPro2013, .macPro2019, .homePodMini:
             return false
         }
     }

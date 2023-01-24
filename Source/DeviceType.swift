@@ -215,6 +215,8 @@ public enum DeviceType: String {
     case iPadAir3GCellular = "iPad11,4" // "iPad Air (3rd generation) Wi-Fi + Cellular"
     case iPadAir4G = "iPad13,1" // "iPad Air (4th generation) Wi-Fi"
     case iPadAir4GCellular = "iPad13,2" // "iPad Air (4th generation) Wi-Fi + Cellular"
+    case iPadAir5G = "iPad13,16" // "iPad Air (5th generation) Wi-Fi"
+    case iPadAir5GCellular = "iPad13,17" // "iPad Air (5th generation) Wi-Fi + Cellular"
 
     case iPadPro1G9i = "iPad6,3" // "iPad Pro (9.7 inch) Wi-Fi"
     case iPadPro1G9iCellular = "iPad6,4" // "iPad Pro (9.7 inch) Wi-Fi + Cellular"
@@ -289,6 +291,11 @@ public enum DeviceType: String {
     case iPhone13ProMax = "iPhone14,3" // "iPhone 13 Pro Max"
     case iPhone13Mini = "iPhone14,4" // "iPhone 13 Mini"
     case iPhone13 = "iPhone14,5" // "iPhone 13"
+    case iPhoneSE3G = "iPhone14,6" // "iPhone SE (3rd generation)"
+    case iPhone14 = "iPhone14,7" // "iPhone 14"
+    case iPhone14Plus = "iPhone14,8" // "iPhone 14 Plus"
+    case iPhone14Pro = "iPhone15,2" // "iPhone 14 Pro"
+    case iPhone14ProMax = "iPhone15,3" // "iPhone 14 Pro Max"
 
     case iPod1G = "iPod1,1" // "iPod touch (1st generation)"
     case iPod2G = "iPod2,1" // "iPod touch (2nd generation)"
@@ -297,6 +304,8 @@ public enum DeviceType: String {
     case iPod5G = "iPod5,1" // "iPod touch (5th generation)"
     case iPod6G = "iPod7,1" // "iPod touch (6th generation)"
     case iPod7G = "iPod9,1" // "iPod touch (7th generation)"
+
+    case homePodMini = "AudioAccesory5,1" // "HomePod Mini"
 
     case simulatorI386 = "i386" // "Simulator (i386)"
     case simulatorX8664 = "x86_64" // "Simulator (x86_64)"
@@ -539,6 +548,8 @@ public extension DeviceType {
         case .iPadAir3GCellular: return "iPad Air (3rd generation) Wi-Fi + Cellular"
         case .iPadAir4G: return "iPad Air (4th generation) Wi-Fi"
         case .iPadAir4GCellular: return "iPad Air (4th generation) Wi-Fi + Cellular"
+        case .iPadAir5G: return "iPad Air (5th generation) Wi-Fi"
+        case .iPadAir5GCellular: return "iPad Air (5th generation) Wi-Fi + Cellular"
 
         case .iPadPro1G9i: return "iPad Pro (9.7 inch) Wi-Fi"
         case .iPadPro1G9iCellular: return "iPad Pro (9.7 inch) Wi-Fi + Cellular"
@@ -613,6 +624,11 @@ public extension DeviceType {
         case .iPhone13ProMax: return "iPhone 13 Pro Max"
         case .iPhone13Mini: return "iPhone 13 Mini"
         case .iPhone13: return "iPhone 13"
+        case .iPhoneSE3G: return "iPhone SE (3rd generation)"
+        case .iPhone14: return "iPhone 14"
+        case .iPhone14Plus: return "iPhone 14 Plus"
+        case .iPhone14Pro: return "iPhone 14 Pro"
+        case .iPhone14ProMax: return "iPhone 14 Pro Max"
 
         case .iPod1G: return "iPod touch (1st generation)"
         case .iPod2G: return "iPod touch (2nd generation)"
@@ -621,6 +637,8 @@ public extension DeviceType {
         case .iPod5G: return "iPod touch (5th generation)"
         case .iPod6G: return "iPod touch (6th generation)"
         case .iPod7G: return "iPod touch (7th generation)"
+
+        case .homePodMini: return "HomePod Mini"
 
         case .simulatorI386: return "Simulator (i386)"
         case .simulatorX8664: return "Simulator (x86_64)"
