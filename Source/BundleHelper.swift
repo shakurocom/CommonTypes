@@ -5,7 +5,7 @@
 import UIKit
 
 /**
- Helper that provides access to the bundle in which resources are stored.
+ Helper that provides access to the bundle where resources are stored.
  */
 public class BundleHelper {
 
