@@ -5,7 +5,7 @@
 // https://everymac.com/ultimate-mac-lookup/?search_keywords=iPad6%2C3
 // https://github.com/SeparateRecords/apple_device_identifiers
 //
-// Copyright (c) 2017 Shakuro (https://shakuro.com/)
+// Copyright (c) 2017-2024 Shakuro (https://shakuro.com/)
 // Sergey Laschuk
 //
 
@@ -42,10 +42,6 @@ public enum DeviceType: String {
     case appleWatch5S44mm = "Watch5,2" // "Apple Watch Series 5 (GPS) 44mm"
     case appleWatch5S40mmCellular = "Watch5,3" // "Apple Watch Series 5 (GPS + Cellular) 40mm"
     case appleWatch5S44mmCellular = "Watch5,4" // "Apple Watch Series 5 (GPS + Cellular) 44mm"
-    case appleWatchSE40mm = "Watch5,9" // "Apple Watch SE (GPS) 40mm"
-    case appleWatchSE44mm = "Watch5,10" // "Apple Watch SE (GPS) 44mm"
-    case appleWatchSE40mmCellular = "Watch5,11" // "Apple Watch SE (GPS + Cellular) 40mm"
-    case appleWatchSE44mmCellular = "Watch5,12" // "Apple Watch SE (GPS + Cellular) 44mm"
     case appleWatch6S40mm = "Watch6,1" // "Apple Watch Series 6 (GPS) 40mm"
     case appleWatch6S44mm = "Watch6,2" // "Apple Watch Series 6 (GPS) 44mm"
     case appleWatch6S40mmCellular = "Watch6,3" // "Apple Watch Series 6 (GPS + Cellular) 40mm"
@@ -54,6 +50,26 @@ public enum DeviceType: String {
     case appleWatch7S45mm = "Watch6,7" // "Apple Watch Series 7 (GPS) 45mm"
     case appleWatch7S41mmCellular = "Watch6,8" // "Apple Watch Series 7 (GPS + Cellular) 41mm"
     case appleWatch7S45mmCellular = "Watch6,9" // "Apple Watch Series 7 (GPS + Cellular) 45mm"
+    case appleWatch8S41mm = "Watch6,14" // "Apple Watch Series 8 (GPS) 41mm"
+    case appleWatch8S45mm = "Watch6,15" // "Apple Watch Series 8 (GPS) 45mm"
+    case appleWatch8S41mmCellular = "Watch6,16" // "Apple Watch Series 8 (GPS + Cellular) 41mm"
+    case appleWatch8S45mmCellular = "Watch6,17" // "Apple Watch Series 8 (GPS + Cellular) 45mm"
+    case appleWatch9S41mm = "Watch7,1" // "Apple Watch Series 9 (GPS) 41mm"
+    case appleWatch9S45mm = "Watch7,2" // "Apple Watch Series 9 (GPS) 45mm"
+    case appleWatch9S41mmCellular = "Watch7,3" // "Apple Watch Series 9 (GPS + Cellular) 41mm"
+    case appleWatch9S45mmCellular = "Watch7,4" // "Apple Watch Series 9 (GPS + Cellular) 45mm"
+
+    case appleWatchSE40mm = "Watch5,9" // "Apple Watch SE (GPS) 40mm"
+    case appleWatchSE44mm = "Watch5,10" // "Apple Watch SE (GPS) 44mm"
+    case appleWatchSE40mmCellular = "Watch5,11" // "Apple Watch SE (GPS + Cellular) 40mm"
+    case appleWatchSE44mmCellular = "Watch5,12" // "Apple Watch SE (GPS + Cellular) 44mm"
+    case appleWatchSE2G40mm = "Watch6,10" // "Apple Watch SE 2 (GPS) 40mm"
+    case appleWatchSE2G44mm = "Watch6,11" // "Apple Watch SE 2 (GPS) 44mm"
+    case appleWatchSE2G40mmCellular = "Watch6,12" // "Apple Watch SE 2 (GPS + Cellular) 40mm"
+    case appleWatchSE2G44mmCellular = "Watch6,13" // "Apple Watch SE 2 (GPS + Cellular) 44mm"
+
+    case appleWatchUltra1G = "Watch6,18" // "Apple Watch Ultra 49 mm"
+    case appleWatchUltra2G = "Watch7,5" // "Apple Watch Ultra 2 49 mm"
 
     case iMac2009_20i = "iMac9,1" // "iMac (20/24-inch, Early 2009)"
     case iMac2009_21i = "iMac10,1" // "iMac (21/27-inch, Late 2009)"
@@ -189,6 +205,8 @@ public enum DeviceType: String {
     case iPad8GCellular = "iPad11,7" // "iPad (8th generation) Wi-Fi + Cellular"
     case iPad9G = "iPad12,1" // "iPad (9th generation) Wi-Fi"
     case iPad9GCellular = "iPad12,2" // "iPad (9th generation) Wi-Fi + Cellular"
+    case iPad10G = "iPad13,18" // "iPad 10.9\" (10th generation) Wi-Fi"
+    case iPad10GCellular = "iPad13,19" // "iPad 10.9\" (10th generation) Wi-Fi + Cellular"
 
     case iPadMini1G = "iPad2,5" // "iPad mini"
     case iPadMini1GGSM = "iPad2,6" // "iPad mini (LTE + GSM)"
@@ -242,10 +260,14 @@ public enum DeviceType: String {
     case iPadPro3G11iCellularChina = "iPad13,7" // "iPad Pro 11 inch (3rd generation) Wi-Fi + Cellular (China)"
     case iPadPro4G = "iPad8,11" // "iPad Pro 12.9 inch (4th generation) Wi-Fi"
     case iPadPro4GCellular = "iPad8,12" // "iPad Pro 12.9 inch (4th generation) Wi-Fi + Cellular"
+    case iPadPro4G11i = "iPad14,3" // "iPad Pro 11 inch (4th generation) Wi-Fi"
+    case iPadPro4G11iCellular = "iPad14,4" // "iPad Pro 11 inch (4th generation) Wi-Fi + Cellular"
     case iPadPro5G = "iPad13,8" // "iPad Pro 12.9 inch (5th generation) Wi-Fi"
     case iPadPro5GCellularUS = "iPad13,9" // "iPad Pro 12.9 inch (5th generation) Wi-Fi + Cellular (US)"
     case iPadPro5GCellularGlobal = "iPad13,10" // "iPad Pro 12.9 inch (5th generation) Wi-Fi + Cellular (Global)"
     case iPadPro5GCellularChina = "iPad13,11" // "iPad Pro 12.9 inch (5th generation) Wi-Fi + Cellular (China)"
+    case iPadPro6G = "iPad14,5" // "iPad Pro 12.9 inch (6th generation) Wi-Fi"
+    case iPadPro6GCellular = "iPad14,6" // "iPad Pro 12.9 inch (6th generation) Wi-Fi + Cellular"
 
     case iPhone2G = "iPhone1,1" // "iPhone"
     case iPhone3G = "iPhone1,2" // "iPhone 3G"
@@ -296,6 +318,10 @@ public enum DeviceType: String {
     case iPhone14Plus = "iPhone14,8" // "iPhone 14 Plus"
     case iPhone14Pro = "iPhone15,2" // "iPhone 14 Pro"
     case iPhone14ProMax = "iPhone15,3" // "iPhone 14 Pro Max"
+    case iPhone15 = "iPhone15,4" // "iPhone 15"
+    case iPhone15Plus = "iPhone15,5" // "iPhone 15 Plus"
+    case iPhone15Pro = "iPhone16,1" // "iPhone 15 Pro"
+    case iPhone15ProMax = "iPhone16,2" // "iPhone 15 Pro Max"
 
     case iPod1G = "iPod1,1" // "iPod touch (1st generation)"
     case iPod2G = "iPod2,1" // "iPod touch (2nd generation)"
@@ -309,6 +335,7 @@ public enum DeviceType: String {
 
     case simulatorI386 = "i386" // "Simulator (i386)"
     case simulatorX8664 = "x86_64" // "Simulator (x86_64)"
+    case simulatorARM64 = "arm64" // "Simulator (arm64)"
 
     case notAvailable = "_NOT_AVAILABLE_" // unknown device from future
 
@@ -375,10 +402,6 @@ public extension DeviceType {
         case .appleWatch5S44mm: return "Apple Watch Series 5 (GPS) 44mm"
         case .appleWatch5S40mmCellular: return "Apple Watch Series 5 (GPS + Cellular) 40mm"
         case .appleWatch5S44mmCellular: return "Apple Watch Series 5 (GPS + Cellular) 44mm"
-        case .appleWatchSE40mm: return "Apple Watch SE (GPS) 40mm"
-        case .appleWatchSE44mm: return "Apple Watch SE (GPS) 44mm"
-        case .appleWatchSE40mmCellular: return "Apple Watch SE (GPS + Cellular) 40mm"
-        case .appleWatchSE44mmCellular: return "Apple Watch SE (GPS + Cellular) 44mm"
         case .appleWatch6S40mm: return "Apple Watch Series 6 (GPS) 40mm"
         case .appleWatch6S44mm: return "Apple Watch Series 6 (GPS) 44mm"
         case .appleWatch6S40mmCellular: return "Apple Watch Series 6 (GPS + Cellular) 40mm"
@@ -387,6 +410,26 @@ public extension DeviceType {
         case .appleWatch7S45mm: return "Apple Watch Series 7 (GPS) 45mm"
         case .appleWatch7S41mmCellular: return "Apple Watch Series 7 (GPS + Cellular) 41mm"
         case .appleWatch7S45mmCellular: return "Apple Watch Series 7 (GPS + Cellular) 45mm"
+        case .appleWatch8S41mm: return "Apple Watch Series 8 (GPS) 41mm"
+        case .appleWatch8S45mm: return "Apple Watch Series 8 (GPS) 45mm"
+        case .appleWatch8S41mmCellular: return "Apple Watch Series 8 (GPS + Cellular) 41mm"
+        case .appleWatch8S45mmCellular: return "Apple Watch Series 8 (GPS + Cellular) 45mm"
+        case .appleWatch9S41mm: return "Apple Watch Series 9 (GPS) 41mm"
+        case .appleWatch9S45mm: return "Apple Watch Series 9 (GPS) 45mm"
+        case .appleWatch9S41mmCellular: return "Apple Watch Series 9 (GPS + Cellular) 41mm"
+        case .appleWatch9S45mmCellular: return "Apple Watch Series 9 (GPS + Cellular) 45mm"
+
+        case .appleWatchSE40mm: return "Apple Watch SE (GPS) 40mm"
+        case .appleWatchSE44mm: return "Apple Watch SE (GPS) 44mm"
+        case .appleWatchSE40mmCellular: return "Apple Watch SE (GPS + Cellular) 40mm"
+        case .appleWatchSE44mmCellular: return "Apple Watch SE (GPS + Cellular) 44mm"
+        case .appleWatchSE2G40mm: return "Apple Watch SE 2 (GPS) 40mm"
+        case .appleWatchSE2G44mm: return "Apple Watch SE 2 (GPS) 44mm"
+        case .appleWatchSE2G40mmCellular: return "Apple Watch SE 2 (GPS + Cellular) 40mm"
+        case .appleWatchSE2G44mmCellular: return "Apple Watch SE 2 (GPS + Cellular) 44mm"
+
+        case .appleWatchUltra1G: return "Apple Watch Ultra 49 mm"
+        case .appleWatchUltra2G: return "Apple Watch Ultra 2 49 mm"
 
         case .iMac2009_20i: return "iMac (20/24-inch, Early 2009)"
         case .iMac2009_21i: return "iMac (21/27-inch, Late 2009)"
@@ -522,6 +565,8 @@ public extension DeviceType {
         case .iPad8GCellular: return "iPad (8th generation) Wi-Fi + Cellular"
         case .iPad9G: return "iPad (9th generation) Wi-Fi"
         case .iPad9GCellular: return "iPad (9th generation) Wi-Fi + Cellular"
+        case .iPad10G: return "iPad 10.9\" (10th generation) Wi-Fi"
+        case .iPad10GCellular: return "iPad 10.9\" (10th generation) Wi-Fi + Cellular"
 
         case .iPadMini1G: return "iPad mini"
         case .iPadMini1GGSM: return "iPad mini (LTE + GSM)"
@@ -575,10 +620,14 @@ public extension DeviceType {
         case .iPadPro3G11iCellularChina: return "iPad Pro 11 inch (3rd generation) Wi-Fi + Cellular (China)"
         case .iPadPro4G: return "iPad Pro 12.9 inch (4th generation) Wi-Fi"
         case .iPadPro4GCellular: return "iPad Pro 12.9 inch (4th generation) Wi-Fi + Cellular"
+        case .iPadPro4G11i: return "iPad Pro 11 inch (4th generation) Wi-Fi"
+        case .iPadPro4G11iCellular: return "iPad Pro 11 inch (4th generation) Wi-Fi + Cellular"
         case .iPadPro5G: return "iPad Pro 12.9 inch (5th generation) Wi-Fi"
         case .iPadPro5GCellularUS: return "iPad Pro 12.9 inch (5th generation) Wi-Fi + Cellular (US)"
         case .iPadPro5GCellularGlobal: return "iPad Pro 12.9 inch (5th generation) Wi-Fi + Cellular (Global)"
         case .iPadPro5GCellularChina: return "iPad Pro 12.9 inch (5th generation) Wi-Fi + Cellular (China)"
+        case .iPadPro6G: return "iPad Pro 12.9 inch (6th generation) Wi-Fi"
+        case .iPadPro6GCellular: return "iPad Pro 12.9 inch (6th generation) Wi-Fi + Cellular"
 
         case .iPhone2G: return "iPhone"
         case .iPhone3G: return "iPhone 3G"
@@ -629,6 +678,10 @@ public extension DeviceType {
         case .iPhone14Plus: return "iPhone 14 Plus"
         case .iPhone14Pro: return "iPhone 14 Pro"
         case .iPhone14ProMax: return "iPhone 14 Pro Max"
+        case .iPhone15: return "iPhone 15"
+        case .iPhone15Plus: return "iPhone 15 Plus"
+        case .iPhone15Pro: return "iPhone 15 Pro"
+        case .iPhone15ProMax: return "iPhone 15 Pro Max"
 
         case .iPod1G: return "iPod touch (1st generation)"
         case .iPod2G: return "iPod touch (2nd generation)"
@@ -642,6 +695,7 @@ public extension DeviceType {
 
         case .simulatorI386: return "Simulator (i386)"
         case .simulatorX8664: return "Simulator (x86_64)"
+        case .simulatorARM64: return "Simulator (arm64)"
 
         case .notAvailable: return "Not Available"
         }

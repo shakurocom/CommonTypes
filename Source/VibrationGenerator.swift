@@ -101,7 +101,7 @@ public class VibrationGenerator {
                 .iPadPro1G9i, .iPadPro1G9iCellular, .iPadPro1G10i, .iPadPro1G10iCellular, .iPadPro1G12i, .iPadPro1G12iCellular,
                 .iPadPro1G11i, .iPadPro1G11i1TB, .iPadPro1G11iCellular, .iPadPro1G11iCellular1TB,
                 .iPadPro2G11i, .iPadPro2G11iCellular, .iPadPro2G12i, .iPadPro2G12iCellular,
-                .simulatorI386, .simulatorX8664,
+                .simulatorI386, .simulatorX8664, .simulatorARM64,
                 .notAvailable:
             return false
 
@@ -111,6 +111,7 @@ public class VibrationGenerator {
                 .iPad7G, .iPad7GCellular,
                 .iPad8G, .iPad8GCellular,
                 .iPad9G, .iPad9GCellular,
+                .iPad10G, .iPad10GCellular,
                 .iPadMini5G, .iPadMini5GCellular,
                 .iPadMini6G, .iPadMini6GCellular,
                 .iPadAir3G, .iPadAir3GCellular,
@@ -125,10 +126,15 @@ public class VibrationGenerator {
                 .appleWatch6S40mm, .appleWatch6S40mmCellular, .appleWatch6S44mm, .appleWatch6S44mmCellular,
                 .appleWatchSE40mm, .appleWatchSE40mmCellular, .appleWatchSE44mm, .appleWatchSE44mmCellular,
                 .appleWatch7S41mm, .appleWatch7S41mmCellular, .appleWatch7S45mm, .appleWatch7S45mmCellular,
+                .appleWatch8S41mm, .appleWatch8S41mmCellular, .appleWatch8S45mm, .appleWatch8S45mmCellular,
+                .appleWatch9S41mm, .appleWatch9S41mmCellular, .appleWatch9S45mm, .appleWatch9S45mmCellular,
+                .appleWatchSE2G40mm, .appleWatchSE2G40mmCellular, .appleWatchSE2G44mm, .appleWatchSE2G44mmCellular,
+                .appleWatchUltra1G, .appleWatchUltra2G,
                 .iPadPro3G11i, .iPadPro3G11iCellularUS, .iPadPro3G11iCellularChina, .iPadPro3G11iCellularGlobal,
                 .iPadPro3G12i, .iPadPro3G12i1TB, .iPadPro3G12iCellular, .iPadPro3G12iCellular1TB,
-                .iPadPro4G, .iPadPro4GCellular,
-                .iPadPro5G, .iPadPro5GCellularUS, .iPadPro5GCellularGlobal, .iPadPro5GCellularChina:
+                .iPadPro4G, .iPadPro4GCellular, .iPadPro4G11i, .iPadPro4G11iCellular,
+                .iPadPro5G, .iPadPro5GCellularUS, .iPadPro5GCellularGlobal, .iPadPro5GCellularChina,
+                .iPadPro6G, .iPadPro6GCellular:
             // should be, but untested
             return false
 
@@ -139,7 +145,8 @@ public class VibrationGenerator {
                 .iPhoneSE2G, .iPhoneSE3G,
                 .iPhone12Mini, .iPhone12, .iPhone12Pro, .iPhone12ProMax,
                 .iPhone13Pro, .iPhone13ProMax, .iPhone13Mini, .iPhone13,
-                .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax:
+                .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax,
+                .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax:
             return true
 
         case .appleTV1G, .appleTV2G, .appleTV3G2012, .appleTV3G2013, .appleTVHD, .appleTV4K1G, .appleTV4K2G,
