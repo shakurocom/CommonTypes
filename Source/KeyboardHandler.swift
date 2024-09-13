@@ -83,7 +83,8 @@ extension KeyboardHandler {
         public let animationCurve: UIView.AnimationCurve
 
         internal init(userInfo: [AnyHashable: Any]?, enableCurveHack: Bool) {
-            if let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+               keyboardFrame.height > 0 { // if Accessibility -> Motion -> Reduce Motion and Prefer Cross-Fade Transitions
                 let screenSize: CGRect = UIScreen.main.bounds
                 newHeight = screenSize.height - keyboardFrame.origin.y
             } else {
