@@ -54,7 +54,7 @@ extension UIViewController {
                 animations: {
                     realAnimations(containerView, childViewController.view)
             },
-                completion: { (_) -> Void in
+                completion: { (_) in
                     if notifyAboutAppearanceTransition {
                         childViewController.endAppearanceTransition()
                     }
