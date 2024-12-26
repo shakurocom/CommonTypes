@@ -43,7 +43,7 @@ public func optionalPromotingCast<T>(_ value: T) -> T? {
     //  - unknown types should assert()'ed
     //
     //  https://forums.swift.org/t/get-value-after-assigning-string-any-to-string-any/10595/3
-    func forceCast<T, U>(_ value: T, to _: U.Type) -> U {
+    func forceCast<Source, U>(_ value: Source, to _: U.Type) -> U {
         return value as! U // swiftlint:disable:this force_cast
     }
     return forceCast(value, to: T?.self)

@@ -9,6 +9,7 @@ import UIKit
 
 // TODO: add example
 /// Instanceble because new styles require preparation (done in init) to be able to play without delay.
+@MainActor
 public class VibrationGenerator {
 
     /// Preferrable. Supported on iPhone 7 and above AND iOS 10+
@@ -177,6 +178,7 @@ public class VibrationGenerator {
 
 }
 
+@MainActor
 private class GeneratorWrapper {
 
     private let style: VibrationGenerator.NewStyle

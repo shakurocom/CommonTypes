@@ -8,6 +8,7 @@ import UIKit
 /**
  Utility to handle keyboard appearing & disappearing "in one line".
  */
+@MainActor
 public class KeyboardHandler {
 
     /**
@@ -37,34 +38,50 @@ public class KeyboardHandler {
             object: nil,
             queue: nil,
             using: { (notification) in
-                self.processKeyboardNotification(notification)
-        })
+                let userInfo = notification.userInfo
+                let keyboardFrame: CGRect? = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+                let duration: Float? = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.floatValue
+                let curveValue: Int? = userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int
+                Task(operation: { @MainActor in
+                    guard self.isActive else {
+                        return
+                    }
+                    self.heightDidChangeHandler(KeyboardChange(keyboardFrame: keyboardFrame,
+                                                               duration: duration,
+                                                               curveValue: curveValue,
+                                                               enableCurveHack: self.isCurveHackEnabled))
+                })
+            })
         observerTokens.append(willShowKeyboardObserverToken)
         let willHideKeyboardObserverToken = center.addObserver(
             forName: UIResponder.keyboardWillHideNotification,
             object: nil,
             queue: nil,
             using: { (notification) in
-                self.processKeyboardNotification(notification)
-        })
+                let userInfo = notification.userInfo
+                let keyboardFrame: CGRect? = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+                let duration: Float? = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.floatValue
+                let curveValue: Int? = userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int
+                Task(operation: { @MainActor in
+                    guard self.isActive else {
+                        return
+                    }
+                    self.heightDidChangeHandler(KeyboardChange(keyboardFrame: keyboardFrame,
+                                                               duration: duration,
+                                                               curveValue: curveValue,
+                                                               enableCurveHack: self.isCurveHackEnabled))
+                })
+            })
         observerTokens.append(willHideKeyboardObserverToken)
     }
 
     deinit {
-        let center: NotificationCenter = NotificationCenter.default
-        for token in observerTokens {
-            center.removeObserver(token)
-        }
-    }
-
-    // MARK: - Private
-
-    private func processKeyboardNotification(_ notification: Notification) {
-        guard isActive else {
-            return
-        }
-        let change = KeyboardChange(userInfo: notification.userInfo, enableCurveHack: isCurveHackEnabled)
-        heightDidChangeHandler(change)
+        MainActor.assumeIsolated({
+            let center: NotificationCenter = NotificationCenter.default
+            for token in observerTokens {
+                center.removeObserver(token)
+            }
+        })
     }
 
 }
@@ -76,22 +93,23 @@ extension KeyboardHandler {
         static let defaultAnimationCurve: UIView.AnimationCurve = .easeIn
     }
 
+    @MainActor
     public struct KeyboardChange {
 
         public let newHeight: CGFloat
         public let animationDuration: TimeInterval
         public let animationCurve: UIView.AnimationCurve
 
-        internal init(userInfo: [AnyHashable: Any]?, enableCurveHack: Bool) {
-            if let keyboardFrame = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
-               keyboardFrame.height > 0 { // if Accessibility -> Motion -> Reduce Motion and Prefer Cross-Fade Transitions
+        internal init(keyboardFrame: CGRect?, duration: Float?, curveValue: Int?, enableCurveHack: Bool) {
+            if let keyboardFrameActual = keyboardFrame,
+               keyboardFrameActual.height > 0 { // if Accessibility -> Motion -> Reduce Motion and Prefer Cross-Fade Transitions
                 let screenSize: CGRect = UIScreen.main.bounds
-                newHeight = screenSize.height - keyboardFrame.origin.y
+                newHeight = screenSize.height - keyboardFrameActual.origin.y
             } else {
                 newHeight = 0.0
             }
-            if let duration = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.floatValue, duration > 0 {
-                animationDuration = TimeInterval(duration)
+            if let durationActual = duration, durationActual > 0 {
+                animationDuration = TimeInterval(durationActual)
             } else {
                 animationDuration = Constant.defaultAnimationDuration
             }
@@ -100,8 +118,8 @@ extension KeyboardHandler {
                 // so UIViewAnimationCurve(rawValue: curveValue) returns nil. As a workaround, get a
                 // reference to an EaseIn curve, then change the underlying pointer data with that ref.
                 var curve = Constant.defaultAnimationCurve
-                if let curveValue = userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int {
-                    NSNumber(value: curveValue).getValue(&curve)
+                if let curveValueActual = curveValue {
+                    NSNumber(value: curveValueActual).getValue(&curve)
                 }
                 animationCurve = curve
             } else {

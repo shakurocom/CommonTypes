@@ -44,11 +44,11 @@ internal protocol EventHandlerProtocol: AnyObject {
     func removeToken(_ token: UInt)
 }
 
-public class EventHandlerBase<T>: EventHandlerProtocol {
+public class EventHandlerBase<T: Sendable>: EventHandlerProtocol {
 
-    public typealias HandlerType = (_ arg1: T) -> Void
+    public typealias HandlerType = @Sendable (_ arg1: T) -> Void
 
-    private struct HandlerData {
+    private struct HandlerData: Sendable {
         internal let queue: DispatchQueue?
         internal let handler: HandlerType
     }
@@ -97,7 +97,7 @@ public class EventHandlerBase<T>: EventHandlerProtocol {
 
 /// Typed alternative for Foundation.Notification.
 /// - warning: Number of tokens is limited by `UInt.max()`
-public class EventHandlerAsync<T>: EventHandlerBase<T> {
+public class EventHandlerAsync<T: Sendable>: EventHandlerBase<T> {
 
     public override init(name: String? = nil) {
         // override just to make it public
@@ -115,11 +115,11 @@ public class EventHandlerAsync<T>: EventHandlerBase<T> {
 
 /// Typed alternative for Foundation.Notification.
 /// - warning: Number of tokens is limited by `UInt.max()`
-public class EventHandler<T>: EventHandlerAsync<T> {
+public class EventHandler<T: Sendable>: EventHandlerAsync<T> {
 
     /// Adds another handler. Handler will be called synchroniously on the invoker's thread.
     /// - parameter handler: block to be called on each invoked event.
-    public func add(handler: @escaping (T) -> Void) -> EventHandlerToken {
+    public func add(handler: @escaping @Sendable (T) -> Void) -> EventHandlerToken {
         return addInternal(queue: nil, handler: handler)
     }
 

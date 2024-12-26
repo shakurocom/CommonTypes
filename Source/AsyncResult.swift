@@ -5,7 +5,7 @@
 
 import Foundation
 
-public enum AsyncResult<ResultType> {
+public enum AsyncResult<ResultType: Sendable>: Sendable {
 
     case success(result: ResultType)
     case failure(error: Error)
@@ -19,7 +19,7 @@ public enum AsyncResult<ResultType> {
 
 }
 
-public enum CancellableAsyncResult<ResultType> {
+public enum CancellableAsyncResult<ResultType: Sendable>: Sendable {
 
     case success(result: ResultType)
     case cancelled

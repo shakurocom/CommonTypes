@@ -5,6 +5,7 @@
 
 import UIKit
 
+@MainActor
 internal protocol ExampleViewControllerProtocol {
 
     static func instantiate(example: Example) -> UIViewController

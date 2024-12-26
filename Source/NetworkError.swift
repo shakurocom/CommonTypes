@@ -11,7 +11,7 @@ public protocol NetworkErrorConvertible {
 
 public struct NetworkError: PresentableError, NetworkErrorConvertible {
 
-    public enum Value {
+    public enum Value: Sendable {
         case invalidHTTPStatusCode(Int)
         case apiError(status: Int, faultCode: String, errorDescription: String)
         case generalError(errorDescription: String)

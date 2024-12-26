@@ -18,6 +18,7 @@ public class DeviceOrientationListener {
 
     // MARK: - Initialization
 
+    @MainActor
     public init(accelerometerUpdateInterval: TimeInterval = 0.1) {
         let currentDevice = DeviceType.current
         isSimulatorMode = currentDevice == .simulatorI386 || currentDevice == .simulatorX8664
@@ -40,6 +41,7 @@ public class DeviceOrientationListener {
 
     // MARK: - Public
 
+    @MainActor
     public var currentOrientation: UIDeviceOrientation {
         if isSimulatorMode {
             return UIDevice.current.orientation

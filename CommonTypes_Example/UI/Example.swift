@@ -5,6 +5,7 @@
 
 import UIKit
 
+@MainActor
 internal struct Example {
 
     internal let title: String

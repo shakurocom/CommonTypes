@@ -85,6 +85,7 @@ public class BundleHelper {
     /// Returns a nib object from the nib file.
     /// - parameter name: The name of the nib file, without any leading path information.
     /// - returns: The initialized UINib object. An exception is thrown if there were errors during initialization or the nib file could not be located.
+    @MainActor
     public func loadNib(name: String) -> UINib {
         return UINib(nibName: name, bundle: bundle)
     }
@@ -100,6 +101,7 @@ public class BundleHelper {
      - Example:
      `let exampleViewController: ExampleViewController = BundleHelper.instantiateViewControllerFromBundle(targetClass: ExampleViewController.type, nibName: "kExampleViewController")`
      */
+    @MainActor
     public func instantiateViewController<T>(targetClass: T.Type, nibName: String) -> T where T: UIViewController {
         return targetClass.init(nibName: nibName, bundle: bundle)
     }
