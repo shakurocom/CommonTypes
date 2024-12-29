@@ -11,7 +11,6 @@
 		179B9FDB28A501F0000066FE /* VibrationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FDA28A501F0000066FE /* VibrationGenerator.swift */; };
 		179B9FDE28A50212000066FE /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FDC28A50212000066FE /* DeviceType.swift */; };
 		179B9FDF28A50212000066FE /* DeviceOrientationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FDD28A50212000066FE /* DeviceOrientationListener.swift */; };
-		179B9FE128A50260000066FE /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FE028A50260000066FE /* EventHandler.swift */; };
 		179B9FE328A5027E000066FE /* EMailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B9FE228A5027D000066FE /* EMailValidator.swift */; };
 		6BE7730C287DB9C4000ED5FB /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */; };
 		6BFD2D26297EC85700644B9F /* ExceptionCatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFD2D25297EC85700644B9F /* ExceptionCatcher.h */; };
@@ -45,7 +44,6 @@
 		179B9FDA28A501F0000066FE /* VibrationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationGenerator.swift; sourceTree = "<group>"; };
 		179B9FDC28A50212000066FE /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		179B9FDD28A50212000066FE /* DeviceOrientationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceOrientationListener.swift; sourceTree = "<group>"; };
-		179B9FE028A50260000066FE /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		179B9FE228A5027D000066FE /* EMailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMailValidator.swift; sourceTree = "<group>"; };
 		6BE7730B287DB9C4000ED5FB /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
 		6BFD2D25297EC85700644B9F /* ExceptionCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatcher.h; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				179B9FDC28A50212000066FE /* DeviceType.swift */,
 				179B9FE228A5027D000066FE /* EMailValidator.swift */,
 				F0DDB7D026986D7900AAD959 /* ErrorInterpreter.swift */,
-				179B9FE028A50260000066FE /* EventHandler.swift */,
 				F0DDB7CB26986D7900AAD959 /* GenericCommonError.swift */,
 				F0DDB7CC26986D7900AAD959 /* GenericError.swift */,
 				A5A4995C27ACDACC00204B33 /* KeyboardHandler.swift */,
@@ -246,7 +243,6 @@
 				A5A4995E27ACDACC00204B33 /* KeyboardHandler.swift in Sources */,
 				179B9FDF28A50212000066FE /* DeviceOrientationListener.swift in Sources */,
 				179B9FE328A5027E000066FE /* EMailValidator.swift in Sources */,
-				179B9FE128A50260000066FE /* EventHandler.swift in Sources */,
 				F0DDB7E526986D7900AAD959 /* ErrorInterpreter.swift in Sources */,
 				172F07AB28A500E100AFD6A2 /* Utils.swift in Sources */,
 				F0DDB7D826986D7900AAD959 /* Comparable+Clamp.swift in Sources */,

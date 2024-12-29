@@ -48,18 +48,18 @@ extension UIColor {
     /// - Parameter hex: A hexadecimal color string
     ///
     /// - returns: `nil` if string do not contain hex value.
-    public convenience init?(hex: String) {
-        let validateHex: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        let scanner: Scanner = Scanner(string: validateHex)
-
-        if validateHex.hasPrefix("#") {
-            scanner.scanLocation = 1
+    public convenience init?(hex: String, alpha: CGFloat = 1.0) {
+        var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+        if hexFormatted.hasPrefix("#") {
+            hexFormatted = String(hexFormatted.dropFirst())
         }
-        var color: UInt32 = 0
-        guard scanner.scanHexInt32(&color) else {
-            return nil
-        }
-        self.init(rgbDecimalColor: color)
+        assert(hexFormatted.count == 6, "Invalid hex code.")
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
+        self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                  alpha: 1.0)
     }
 
     /// Init UIColor with channels as UInt8.
